@@ -1,6 +1,7 @@
 package main
 
 import (
+	"betweb/pkg/setting"
 	"fmt"
 )
 
