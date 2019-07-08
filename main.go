@@ -1,10 +1,15 @@
 package main
 
 import (
-	"betweb/pkg/setting"
-	"fmt"
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	fmt.Println("hi new web site")
+	r := gin.Default()
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"msg": "hi",
+		})
+	})
+	r.Run()
 }
